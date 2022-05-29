@@ -255,19 +255,19 @@ const AllRoutes = () => {
                     path: 'trip', element: <LoadComponent component={Trip} />
                 },
                 {
-                    path: 'trip/addtrips/info', element: <LoadComponent component={Info} />
+                    path: 'trip/activetrips/info', element: <LoadComponent component={Info} />
                 },
                 {
-                    path: 'trip/addtrips/route', element: <LoadComponent component={Route} />
+                    path: 'trip/activetrips/route', element: <LoadComponent component={Route} />
                 },
                 {
-                    path: 'trip/addtrips/commodity', element: <LoadComponent component={Commodity} />
+                    path: 'trip/activetrips/commodity', element: <LoadComponent component={Commodity} />
                 },
                 {
-                    path: 'trip/addtrips/permits', element: <LoadComponent component={Permits} />
+                    path: 'trip/activetrips/permits', element: <LoadComponent component={Permits} />
                 },
                 {
-                    path: 'trip/addtrips/invoice', element: <LoadComponent component={Invo} />
+                    path: 'trip/activetrips/invoice', element: <LoadComponent component={Invo} />
                 },
                 {
                     // path: 'trip/broker', element: <LoadComponent component={Broker} />
