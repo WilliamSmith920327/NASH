@@ -1,6 +1,7 @@
 import { Button, Col, Modal, Row, Form, InputGroup,  } from 'react-bootstrap';
 import { useModal } from './hooks';
 import { PageTitle } from 'components';
+import { truncate } from 'fs/promises';
 
 const Trip = () => {
     const { isOpen, size, className, scroll, toggleModal, openModalWithSize, openModalWithClass, openModalWithScroll } =
@@ -8,6 +9,14 @@ const Trip = () => {
     // kjy commit//
     return (
         <>
+            <PageTitle
+                breadCrumbItems={[
+                    { label: 'trip', path: '/trip', active: true },
+                    { label: 'broker', path: '/trip/broker' },
+                    { label: 'info', path: '/trip/info' }
+                ]}
+                title={'Take control of your paych'}
+            />
             <Modal show={isOpen} onHide={toggleModal} dialogClassName={className} size="lg" backdrop="static" keyboard={false}>
             {/* <Modal show={signUpModal} onHide={toggleSignUp}> */}
                 <Modal.Header className='text-dark' closeButton>TRIP OFFER MODAL</Modal.Header>
@@ -163,12 +172,6 @@ const Trip = () => {
                     </Form>
                 </Modal.Body>
             </Modal>
-            <PageTitle
-                breadCrumbItems={[
-                    { label: 'Manage Team', path: '/manageteam' },
-                ]}
-                title={'Trip'}
-            />
         </>
     )
 };

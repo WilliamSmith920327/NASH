@@ -5,13 +5,18 @@ import PrivateRoute from './PrivateRoute';
 import Root from './Root';
 import { LayoutTypes } from 'appConstants';
 import { useRedux } from 'hooks';
-import { components } from 'react-select';
 
 // lazy load all the views
 const Compensation = React.lazy(() => import('pages/compensation'));
 const ManageTeam = React.lazy(() => import('pages/manageteam'));
 const ActiveLoads = React.lazy(() => import('pages/activeloads'));
 const Trip = React.lazy(() => import('pages/trip'));
+//active trips
+const Info = React.lazy(() => import('pages/trip/activetrips/info'));
+const Route = React.lazy(() => import('pages/trip/activetrips/route'));
+const Commodity = React.lazy(() => import('pages/trip/activetrips/commodity'));
+const Permits = React.lazy(() => import('pages/trip/activetrips/permits'));
+const Invo = React.lazy(() => import('pages/trip/activetrips/invoice'));
 
 // auth
 const Login = React.lazy(() => import('pages/account/Login'));
@@ -248,6 +253,24 @@ const AllRoutes = () => {
                 },
                 {
                     path: 'trip', element: <LoadComponent component={Trip} />
+                },
+                {
+                    path: 'trip/addtrips/info', element: <LoadComponent component={Info} />
+                },
+                {
+                    path: 'trip/addtrips/route', element: <LoadComponent component={Route} />
+                },
+                {
+                    path: 'trip/addtrips/commodity', element: <LoadComponent component={Commodity} />
+                },
+                {
+                    path: 'trip/addtrips/permits', element: <LoadComponent component={Permits} />
+                },
+                {
+                    path: 'trip/addtrips/invoice', element: <LoadComponent component={Invo} />
+                },
+                {
+                    // path: 'trip/broker', element: <LoadComponent component={Broker} />
                 },
                 {
                     path: 'dashboard',
