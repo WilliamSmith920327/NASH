@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { resetAuth, signupUser } from 'redux/actions';
 import { useRedux } from 'hooks';
-import { UserData } from '../Register';
+import { UserData } from '../Register1';
 
 export default function useRegister() {
     const { t } = useTranslation();

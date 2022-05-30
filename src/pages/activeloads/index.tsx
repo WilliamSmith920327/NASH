@@ -2,25 +2,28 @@ import { Row, Col, Card, Nav, Tab } from "react-bootstrap";
 
 const ActiveLoads = () => {
     return (
-        <Row>
-            <Col xl={3}>
-                <Card>
-                    <Card.Header className="text-center">DRIVER</Card.Header>
-                    <Card.Body  className="text-center">
-                        DRIVE <br/>
-                        TRUCK 123 <br />
-                        TRAILER 185 <br />
-                        COMPANY LOGO <br />
-                        CALL ICON <br />
-                        CHAT ICON <br />
-                        ADD NOTE ICON <br />
-                        SEND OFFER BT <br />
-                        ADD TRIP BT <br />
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col xl={9}>
-                <Card>
+        <Card>
+            <Card.Title>
+                <h3 className="text-center text-dark">ACTIVE LOADS</h3>
+            </Card.Title>
+            <Row>
+                <Col xl={3}>
+                    <Card>
+                        <Card.Header className="text-center">DRIVER</Card.Header>
+                        <Card.Body  className="text-center">
+                            DRIVE <br/>
+                            TRUCK 123 <br />
+                            TRAILER 185 <br />
+                            COMPANY LOGO <br />
+                            CALL ICON <br />
+                            CHAT ICON <br />
+                            ADD NOTE ICON <br />
+                            SEND OFFER BT <br />
+                            ADD TRIP BT <br />
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col xl={9}>
                     <Tab.Container defaultActiveKey="driver">
                         <Card>
                             <Card.Header>
@@ -44,8 +47,8 @@ const ActiveLoads = () => {
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item as="li" className="nav-item">
-                                        <Nav.Link href="#" eventKey="date" className=" rounded-0">
-                                            DATE
+                                        <Nav.Link href="#" eventKey="to" className=" rounded-0">
+                                            TO
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item as="li" className="nav-item">
@@ -54,60 +57,58 @@ const ActiveLoads = () => {
                                         </Nav.Link>
                                     </Nav.Item>
                                     <Nav.Item as="li" className="nav-item">
-                                        <Nav.Link href="#" eventKey="ddate" className=" rounded-0">
-                                            D DATE
+                                        <Nav.Link href="#" eventKey="date" className=" rounded-0">
+                                            DATE
                                         </Nav.Link>
                                     </Nav.Item>
                                 </Nav>
 
                                 <Tab.Content>
                                     <Tab.Pane eventKey="driver">
-                                        driver
+                                        driver details
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="status">
-                                        status
+                                        status details
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="from">
-                                        from
+                                        from 
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="to">
+                                        to
+                                    </Tab.Pane>
+                                    <Tab.Pane eventKey="load">
+                                        load details
                                     </Tab.Pane>
                                     <Tab.Pane eventKey="date">
                                         date
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="load">
-                                        load
-                                    </Tab.Pane>
-                                    <Tab.Pane eventKey="ddate">
-                                        ddate
                                     </Tab.Pane>
                                 </Tab.Content>
                             </Card.Body>
                         </Card>
                     </Tab.Container>
-                </Card>
-                <Card>
                     <Tab.Container defaultActiveKey="driver">
                         <Card>
                             <Card.Header>
                                 MY TEAM
                             </Card.Header>
                             <Card.Body>
+                                team content
                             </Card.Body>
                         </Card>
                     </Tab.Container>
-                </Card>
-                <Card>
                     <Tab.Container defaultActiveKey="driver">
                         <Card>
                             <Card.Header>
                                 RECENT COMPLETED
                             </Card.Header>
                             <Card.Body>
+                                recent complete
                             </Card.Body>
                         </Card>
                     </Tab.Container>
-                </Card>
-            </Col>
-        </Row>
+                </Col>
+            </Row>
+        </Card>
     )
 }
 

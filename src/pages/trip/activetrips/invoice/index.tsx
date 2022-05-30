@@ -3,6 +3,7 @@ import { PageTitle, FormInput, FileUploader } from 'components';
 import classNames from 'classnames';
 import Chat from '../../../../components/Chat';
 import Notes from '../../../../components/Notes';
+import ActiveTripsNavbar from '../../../../components/ActiveTripsNavbar';
 
 const Invoice = () => {
     return (
@@ -16,6 +17,8 @@ const Invoice = () => {
                 ]}
                 title={'Permits'}
             />    
+            <ActiveTripsNavbar eventKey="5"/>
+            
             <Row>
                 <Col xl={8} lg={7}>
                     <Card className="d-block">

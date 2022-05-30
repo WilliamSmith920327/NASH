@@ -4,6 +4,7 @@ import Chat from '../../../../components/Chat';
 import Notes from '../../../../components/Notes';
 import GoogleMaps from './GoogleMaps';
 import Accordions from './Accordions';
+import ActiveTripsNavbar from '../../../../components/ActiveTripsNavbar';
 
 const Route = () => {
     return (
@@ -17,6 +18,8 @@ const Route = () => {
             ]}
             title={'Route'}
         />      
+        <ActiveTripsNavbar eventKey="2"/>
+
         <Row>
             <Col xl={8} lg={7}>
                 <GoogleMaps />

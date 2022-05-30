@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import Chat from '../../../../components/Chat';
 import Notes from '../../../../components/Notes';
 import avatar3 from 'assets/images/users/avatar-3.jpg';
+import ActiveTripsNavbar from '../../../../components/ActiveTripsNavbar';
 
 const Commodity = () => {
     return (
@@ -17,6 +18,7 @@ const Commodity = () => {
                 ]}
                 title={'Info'}
             />      
+            <ActiveTripsNavbar eventKey="3"/>
             <Row>
                 <Col xl={8} lg={7}>
                     <Card className="d-block">

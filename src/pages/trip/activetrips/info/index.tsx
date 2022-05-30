@@ -4,6 +4,7 @@ import Chat from '../../../../components/Chat';
 import Notes from '../../../../components/Notes';
 import { Infor } from './types';
 import { infoes } from './data';
+import ActiveTripsNavbar from '../../../../components/ActiveTripsNavbar';
 
 const InfoCard = ({ info }: { info: Infor }) => {
     return (
@@ -40,7 +41,8 @@ const Info = () => {
                     { label: 'info', path: '/pages/trip/activetrips/info', active: true },
                 ]}
                 title={'Info'}
-            />      
+            />
+            <ActiveTripsNavbar eventKey="1"/>
             <Row>
                 <Col xl={8} lg={7}>
 

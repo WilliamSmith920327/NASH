@@ -5,7 +5,7 @@ import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { resetAuth, loginUser } from 'redux/actions';
 import { useRedux } from 'hooks';
-import { UserData } from '../Login';
+import { UserData } from '../Login1';
 
 type LocationState = {
     from?: Location;

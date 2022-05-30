@@ -10,7 +10,18 @@ import { useRedux } from 'hooks';
 const Compensation = React.lazy(() => import('pages/compensation'));
 const ManageTeam = React.lazy(() => import('pages/manageteam'));
 const ActiveLoads = React.lazy(() => import('pages/activeloads'));
-const Trip = React.lazy(() => import('pages/trip'));
+
+const Broker = React.lazy(() => import('pages/trip/addtrip/broker'));
+const NewBroker = React.lazy(() => import('pages/trip/addtrip/broker/NewBroker'));
+const NewContact = React.lazy(() => import('pages/trip/addtrip/broker/NewContact'));
+const FindAgent = React.lazy(() => import('pages/trip/addtrip/broker/FindAgent'));
+const SelectedBroker = React.lazy(() => import('pages/trip/addtrip/broker/SelectedBroker'));
+
+const Commodit = React.lazy(() => import('pages/trip/addtrip/commodity'));
+const Pickup = React.lazy(() => import('pages/trip/addtrip/pickup'));
+const Delivery = React.lazy(() => import('pages/trip/addtrip/delivery'));
+const Submit = React.lazy(() => import('pages/trip/addtrip/submit'));
+
 //active trips
 const Info = React.lazy(() => import('pages/trip/activetrips/info'));
 const Route = React.lazy(() => import('pages/trip/activetrips/route'));
@@ -21,14 +32,14 @@ const Invo = React.lazy(() => import('pages/trip/activetrips/invoice'));
 // auth
 const Login = React.lazy(() => import('pages/account/Login'));
 const Logout = React.lazy(() => import('pages/account/Logout'));
-const Register = React.lazy(() => import('pages/account/Register'));
+const Register1 = React.lazy(() => import('pages/account/Register1'));
 const Confirm = React.lazy(() => import('pages/account/Confirm'));
 const ForgetPassword = React.lazy(() => import('pages/account/ForgetPassword'));
 const LockScreen = React.lazy(() => import('pages/account/LockScreen'));
 
-const Login2 = React.lazy(() => import('pages/account/Login2'));
+const Login2 = React.lazy(() => import('pages/account/Login'));
 const Logout2 = React.lazy(() => import('pages/account/Logout2'));
-const Register2 = React.lazy(() => import('pages/account/Register2'));
+const Register = React.lazy(() => import('pages/account/register'));
 const Confirm2 = React.lazy(() => import('pages/account/Confirm2'));
 const ForgetPassword2 = React.lazy(() => import('pages/account/ForgetPassword2'));
 const LockScreen2 = React.lazy(() => import('pages/account/LockScreen2'));
@@ -212,7 +223,7 @@ const AllRoutes = () => {
                         { path: 'lock-screen', element: <LoadComponent component={LockScreen} /> },
                         { path: 'logout', element: <LoadComponent component={Logout} /> },
                         { path: 'login2', element: <LoadComponent component={Login2} /> },
-                        { path: 'register2', element: <LoadComponent component={Register2} /> },
+                        { path: 'register2', element: <LoadComponent component={Register} /> },
                         { path: 'confirm2', element: <LoadComponent component={Confirm2} /> },
                         { path: 'forget-password2', element: <LoadComponent component={ForgetPassword2} /> },
                         { path: 'lock-screen2', element: <LoadComponent component={LockScreen2} /> },
@@ -252,7 +263,31 @@ const AllRoutes = () => {
                     path: 'activeloads', element: <LoadComponent component={ActiveLoads} />
                 },
                 {
-                    path: 'trip', element: <LoadComponent component={Trip} />
+                    path: 'trip', element: <LoadComponent component={Broker} />
+                },
+                {
+                    path: 'trip/addtrip/broker/newbroker', element: <LoadComponent component={NewBroker} />
+                },
+                {
+                    path: 'trip/addtrip/broker/newcontact', element: <LoadComponent component={NewContact} />
+                },
+                {
+                    path: 'trip/addtrip/broker/findagent', element: <LoadComponent component={FindAgent} />
+                },
+                {
+                    path: 'trip/addtrip/broker/select', element: <LoadComponent component={SelectedBroker} />
+                },
+                {
+                    path: 'trip/addtrip/commodity', element: <LoadComponent component={Commodit} />
+                },
+                {
+                    path: 'trip/addtrip/pickup', element: <LoadComponent component={Pickup} />
+                },
+                {
+                    path: 'trip/addtrip/delivery', element: <LoadComponent component={Delivery} />
+                },
+                {
+                    path: 'trip/addtrip/submit', element: <LoadComponent component={Submit} />
                 },
                 {
                     path: 'trip/activetrips/info', element: <LoadComponent component={Info} />
@@ -268,9 +303,6 @@ const AllRoutes = () => {
                 },
                 {
                     path: 'trip/activetrips/invoice', element: <LoadComponent component={Invo} />
-                },
-                {
-                    // path: 'trip/broker', element: <LoadComponent component={Broker} />
                 },
                 {
                     path: 'dashboard',
