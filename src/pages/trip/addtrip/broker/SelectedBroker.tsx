@@ -1,7 +1,8 @@
 import { Button, Col, Modal, Row, Form, ButtonGroup, Card, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useModal } from '../../hooks';
-import { PageTitle } from 'components';
+import { PageTitle, FileUploader } from 'components';
+import Attachments from './Attachments';
 
 const SelectBroker = () => {
 
@@ -46,21 +47,19 @@ const SelectBroker = () => {
                             </Card>
                         </Col>
                         <Col>
-                            <Card className="text-center">
+                            <Card>
                                 <Form>
                                     <Form.Group className="m-3">
                                         <Form.Label htmlFor="exampleEmail2">CREDIT SCORE</Form.Label>
                                         <Form.Control type="text" name="score" id="exampleEmail2" readOnly/>
                                     </Form.Group>
-
                                     <Form.Group className="m-3">
-                                        <Form.Label htmlFor="exampleEmail2">SCORE PROOF</Form.Label>
-                                        <Form.Control type="email" name="email" id="exampleEmail2" readOnly/>
+                                        <Form.Label>SCORE PROOF</Form.Label>
+                                        <FileUploader />
                                     </Form.Group>
-
                                     <Form.Group className="m-3">
-                                        <Form.Label htmlFor="exampleEmail2">BROKER AGREEMENT</Form.Label>
-                                        <Form.Control type="email" name="email" id="exampleEmail2" readOnly/>
+                                        <Form.Label>BROKER AGREEMENT</Form.Label>
+                                        <FileUploader />
                                     </Form.Group>
                                 </Form>                                
                             </Card>

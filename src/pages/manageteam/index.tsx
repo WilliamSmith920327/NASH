@@ -1,7 +1,5 @@
 import { Row, Col, Card, Dropdown, OverlayTrigger, Tooltip } from 'react-bootstrap';
-
 import { Link } from 'react-router-dom';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import LeftSide from './LeftSide';
 import RightSide from './RightSide';
 

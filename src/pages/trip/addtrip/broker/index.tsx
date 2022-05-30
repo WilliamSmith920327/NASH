@@ -75,8 +75,9 @@ const Broker = () => {
                             <Col md='6'>
                                 <Form.Group>
                                     <InputGroup className="mb-3">
-                                        <InputGroup.Text id="basic-addon1">PICK DAE</InputGroup.Text>
+                                        <InputGroup.Text id="basic-addon1">PICK DATE</InputGroup.Text>
                                         <Form.Control
+                                            type='date'
                                             aria-label="picdae"
                                             aria-describedby="basic-addon1"
                                         />
@@ -88,6 +89,7 @@ const Broker = () => {
                                     <InputGroup className="mb-3">
                                         <InputGroup.Text id="basic-addon1">DEL DATE</InputGroup.Text>
                                         <Form.Control
+                                            type='date'
                                             aria-label="deldate"
                                             aria-describedby="basic-addon1"
                                         />
@@ -172,10 +174,6 @@ const Broker = () => {
                                         COVLD WORK <i className="mdi mdi-forward ms-1"></i>
                                     </Link>
                                 </div>
-                                {/* <Button variant="info" onClick={toggleModal}>
-                                    LOOKS GOOD
-                                </Button>
-                                <Button variant="primary">COVLD WORK</Button> */}
                             </div>
                         </Modal.Footer>
                     </Form>

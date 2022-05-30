@@ -14,15 +14,32 @@ export type MenuItemType = {
 };
 
 const MENU_ITEMS: MenuItemType[] = [
-    { key: 'manage-Team', label: 'Manage Team', url:'/manageteam'},
-    { key: 'compensation', label: 'Compensation', url:'/compensation'},
-    { key: 'active-loads', label: 'Active loads', url:'/activeloads'},
+    { 
+        key: 'manage-Team', 
+        label: 'Manage Team', 
+        isTitle: false,
+        icon: 'uil-object-ungroup',
+        url:'/manageteam'
+    },
+    { 
+        key: 'compensation', 
+        label: 'Compensation',
+        isTitle: false,
+        icon: 'uil-paypal',
+        url:'/compensation'
+    },
+    { 
+        key: 'active-loads', 
+        label: 'Active loads',
+        icon: 'uil-truck-loading',
+        isTitle: false,
+        url:'/activeloads'
+    },
     {
         key: 'trip',
         label: 'Trip',
         isTitle: false,
-        icon: 'uil-home-alt',
-        badge: { variant: 'success', text: '4' },
+        icon: 'uil-clipboard-alt',
         url:'/trip',
     },
 ];

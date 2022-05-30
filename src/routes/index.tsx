@@ -8,7 +8,7 @@ import { useRedux } from 'hooks';
 
 // lazy load all the views
 const Compensation = React.lazy(() => import('pages/compensation'));
-const ManageTeam = React.lazy(() => import('pages/manageteam'));
+const ManageTeam = React.lazy(() => import('pages/manageTeam'));
 const ActiveLoads = React.lazy(() => import('pages/activeloads'));
 
 const Broker = React.lazy(() => import('pages/trip/addtrip/broker'));

@@ -82,7 +82,7 @@ const Pickup = () => {
                     </Form.Group>
                     <Row className='mb-3'>
                         <Col></Col>
-                        <Col md={2}>
+                        <Col md={4}>
                             <Button className="next list-inline-item float-end">ADD TRIP</Button>
                         </Col>
                     </Row>

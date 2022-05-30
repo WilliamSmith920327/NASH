@@ -5,9 +5,9 @@ import { LayoutActionTypes, LayoutStateType } from './constants';
 
 const INIT_STATE: LayoutStateType = {
     layoutColor: LayoutColor.LAYOUT_COLOR_LIGHT,
-    layoutType: LayoutTypes.LAYOUT_HORIZONTAL,
+    layoutType: LayoutTypes.LAYOUT_VERTICAL,
     layoutWidth: LayoutWidth.LAYOUT_WIDTH_FLUID,
-    leftSideBarTheme: SideBarTheme.LEFT_SIDEBAR_THEME_DARK,
+    leftSideBarTheme: SideBarTheme.LEFT_SIDEBAR_THEME_DEFAULT,
     leftSideBarType: SideBarWidth.LEFT_SIDEBAR_TYPE_FIXED,
     showRightSidebar: false,
 };
