@@ -1,33 +1,50 @@
-import { Link } from "react-router-dom";
+import { Row, Col, Card } from 'react-bootstrap';
+import { ChatList, Message } from "./ChatList";
+import profilePic from 'assets/images/users/avatar-1.jpg';
+import profilePic2 from 'assets/images/users/avatar-5.jpg';
 
 const Chat = () => {
+    const chatMessages: Message[] = [
+                {
+                    id: 1,
+                    userPic: profilePic2,
+                    userName: 'Geneva',
+                    text: 'Hello!',
+                    postedOn: '10:00',
+                },
+                {
+                    id: 2,
+                    userPic: profilePic,
+                    userName: 'Dominic',
+                    text: 'Hi, How are you? What about our next meeting?',
+                    postedOn: '10:01',
+                },
+                {
+                    id: 3,
+                    userPic: profilePic2,
+                    userName: 'Geneva',
+                    text: 'Yeah everything is fine',
+                    postedOn: '10:02',
+                },
+                {
+                    id: 4,
+                    userPic: profilePic,
+                    userName: 'Dominic',
+                    text: "Wow that's great!",
+                    postedOn: '10:03',
+                },
+                {
+                    id: 5,
+                    userPic: profilePic2,
+                    userName: 'Dominic',
+                    text: 'Cool!',
+                    postedOn: '10:03',
+                },
+            ];
     return (
-        <form action="#" className="comment-area-box">
-            <textarea
-                rows={3}
-                className="form-control border-0 resize-none"
-                placeholder="Write something...."
-            ></textarea>
-            <div className="p-2 bg-light d-flex justify-content-between align-items-center">
-                <div>
-                    <Link to="#" className="btn btn-sm px-2 font-16 btn-light">
-                        <i className="mdi mdi-account-circle"></i>
-                    </Link>
-                    <Link to="#" className="btn btn-sm px-2 font-16 btn-light">
-                        <i className="mdi mdi-map-marker"></i>
-                    </Link>
-                    <Link to="#" className="btn btn-sm px-2 font-16 btn-light">
-                        <i className="mdi mdi-camera"></i>
-                    </Link>
-                    <Link to="#" className="btn btn-sm px-2 font-16 btn-light">
-                        <i className="mdi mdi-emoticon-outline"></i>
-                    </Link>
-                </div>
-                <button type="submit" className="btn btn-sm btn-dark waves-effect">
-                    Send
-                </button>
-            </div>
-        </form>
+        <Col xl={12}>
+            <ChatList chatMessages={chatMessages}></ChatList>
+        </Col>
     )
 }
 
