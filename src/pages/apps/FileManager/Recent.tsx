@@ -18,7 +18,6 @@ const Recent = ({ recentFiles }: RecentProps) => {
                         <th className="border-0">Last Modified</th>
                         <th className="border-0">Size</th>
                         <th className="border-0">Owner</th>
-                        <th className="border-0">Members</th>
                         <th className="border-0" style={{ width: '80px' }}>
                             Action
                         </th>
@@ -41,27 +40,6 @@ const Recent = ({ recentFiles }: RecentProps) => {
                                 </td>
                                 <td>{file.size}</td>
                                 <td>{file.owner}</td>
-                                <td id="tooltip-container">
-                                    <div className="avatar-group">
-                                        {file.members.map((item, index) => {
-                                            return (
-                                                <OverlayTrigger
-                                                    key={index.toString()}
-                                                    placement="top"
-                                                    overlay={<Tooltip>{item.name}</Tooltip>}
-                                                >
-                                                    <Link to="#" className="avatar-group-item mb-0 me-1">
-                                                        <img
-                                                            src={item.image}
-                                                            className="rounded-circle avatar-xs"
-                                                            alt="friend"
-                                                        />
-                                                    </Link>
-                                                </OverlayTrigger>
-                                            );
-                                        })}
-                                    </div>
-                                </td>
                                 <td>
                                     <ButtonGroup className="d-block">
                                         <Dropdown align="end">

@@ -54,14 +54,6 @@ const NewBroker = () => {
                             </Col>
                         </Form.Group>
                         <Form.Group as={Row} className="mb-3">
-                            <Form.Label htmlFor="score" column sm={3}>
-                                CREATE SCORE
-                            </Form.Label>
-                            <Col sm={9}>
-                                <Form.Control type="text" name="score" id="score" placeholder="CREATE SCORE" />
-                            </Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className="mb-3">
                             <Form.Label htmlFor="address" column sm={3}>
                                 COMPANY ADDRESS
                             </Form.Label>

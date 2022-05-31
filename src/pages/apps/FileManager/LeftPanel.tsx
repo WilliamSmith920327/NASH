@@ -4,27 +4,7 @@ import { Dropdown, ButtonGroup, ProgressBar } from 'react-bootstrap';
 const LeftPanel = () => {
     return (
         <>
-            <ButtonGroup className="d-block mb-2">
-                <Dropdown>
-                    <Dropdown.Toggle className="btn btn-success dropdown-toggle w-100">
-                        <i className="mdi mdi-plus"></i> Create New{' '}
-                    </Dropdown.Toggle>
-                    <Dropdown.Menu>
-                        <Dropdown.Item>
-                            <i className="mdi mdi-folder-plus-outline me-1"></i> Folder
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            <i className="mdi mdi-file-plus-outline me-1"></i> File
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            <i className="mdi mdi-file-document me-1"></i> Document
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            <i className="mdi mdi-upload me-1"></i> Choose File
-                        </Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
-            </ButtonGroup>
+            
 
             <div className="email-menu-list mt-3">
                 <Link to="/apps/file">

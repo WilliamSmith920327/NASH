@@ -1,19 +1,19 @@
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col, Card, Dropdown, ButtonGroup } from 'react-bootstrap';
 import { PageTitle } from 'components';
 import LeftPanel from './LeftPanel';
 import QuickAccess from './QuickAccess';
 import Recent from './Recent';
 import { quickAccessFiles, recentFiles } from './data';
 
+
 const FileManager = () => {
     return (
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Apps', path: '/apps/file' },
-                    { label: 'File Manager', path: '/apps/file', active: true },
+                    { label: 'Paperwork', path: '/apps/file', active: true },
                 ]}
-                title={'File Manager'}
+                title={'Paperwork'}
             />
             <Row>
                 <Col>
@@ -35,18 +35,31 @@ const FileManager = () => {
                                                 />
                                                 <span className="mdi mdi-magnify search-icon"></span>
                                             </div>
+                                            
                                         </form>
                                     </div>
                                     <div>
-                                        <button type="submit" className="btn btn-sm btn-light">
-                                            <i className="mdi mdi-format-list-bulleted"></i>
-                                        </button>
-                                        <button type="submit" className="btn btn-sm">
-                                            <i className="mdi mdi-view-grid"></i>
-                                        </button>
-                                        <button type="submit" className="btn btn-sm">
-                                            <i className="mdi mdi-information-outline"></i>
-                                        </button>
+                                        <ButtonGroup className="d-block mb-2">
+                                            <Dropdown>
+                                                <Dropdown.Toggle className="btn btn-success dropdown-toggle w-100">
+                                                    <i className="mdi mdi-plus"></i> Create New{' '}
+                                                </Dropdown.Toggle>
+                                                <Dropdown.Menu>
+                                                    <Dropdown.Item>
+                                                        <i className="mdi mdi-folder-plus-outline me-1"></i> Folder
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item>
+                                                        <i className="mdi mdi-file-plus-outline me-1"></i> File
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item>
+                                                        <i className="mdi mdi-file-document me-1"></i> Document
+                                                    </Dropdown.Item>
+                                                    <Dropdown.Item>
+                                                        <i className="mdi mdi-upload me-1"></i> Choose File
+                                                    </Dropdown.Item>
+                                                </Dropdown.Menu>
+                                            </Dropdown>
+                                        </ButtonGroup>
                                     </div>
                                 </div>
 

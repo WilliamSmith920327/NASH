@@ -12,7 +12,6 @@ const SocialFeed = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Apps', path: '/apps/social' },
                     { label: 'Social Feed', path: '/apps/social', active: true },
                 ]}
                 title={'Social Feed'}

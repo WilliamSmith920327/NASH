@@ -1,17 +1,17 @@
 import { Row, Col, Card, Nav, Tab } from "react-bootstrap";
 import Driver from "./Driver";
 import Load from "./Loads";
+import { PageTitle } from 'components';
 
 const ActiveLoads = () => {
     return (
         <>
-            {/* <PageTitle
+            <PageTitle
                 breadCrumbItems={[
-                    { label: 'Apps', path: '/apps/social' },
-                    { label: 'Social Feed', path: '/apps/social', active: true },
+                    { label: 'Active Loads', path: '/activeloads', active: true },
                 ]}
-                title={'Social Feed'}
-            /> */}
+                title={'Active Loads'}
+            />
             <Card>
                 <Card.Title>
                     <h3 className="text-center text-dark">ACTIVE LOADS</h3>

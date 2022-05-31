@@ -49,7 +49,6 @@ const FAQ = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Pages', path: '/pages/faq' },
                     { label: 'FAQ', path: '/pages/faq', active: true },
                 ]}
                 title={'FAQ'}

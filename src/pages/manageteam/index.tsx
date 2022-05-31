@@ -39,20 +39,20 @@ const MangeTeam = () => {
                                                     <hr className="my-3" />
                                                     <ul className="mb-0 list-inline">
                                                         <li className="list-inline-item me-3">
-                                                            <h5 className="mb-1">Dispatch</h5>
                                                             <p className="mb-0 font-13">{department.dispatch}</p>
+                                                            <h5 className="mb-1">Dispatch</h5>
                                                         </li>
                                                         <li className="list-inline-item me-3">
-                                                            <h5 className="mb-1">Assistent</h5>
                                                             <p className="mb-0 font-13">{department.assistent}</p>
+                                                            <h5 className="mb-1">Assistent</h5>
                                                         </li>
                                                         <li className="list-inline-item me-3">
-                                                            <h5 className="mb-1">Driver</h5>
                                                             <p className="mb-0 font-13">{department.driver}</p>
+                                                            <h5 className="mb-1">Driver</h5>
                                                         </li>
                                                         <li className="list-inline-item me-3">
-                                                            <h5 className="mb-1">Score</h5>
                                                             <p className="mb-0 font-13">{department.score}</p>
+                                                            <h5 className="mb-1">Score</h5>
                                                         </li>
                                                     </ul>
                                                     <Row className="mt-3">

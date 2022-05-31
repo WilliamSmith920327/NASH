@@ -45,6 +45,7 @@ const MENU_ITEMS: MenuItemType[] = [
     {
         key: 'email-inbox',
         label: 'Email',
+        icon: 'uil-envelope',
         url: '/apps/email/inbox',
         parentKey: 'apps-email',
     },
@@ -73,7 +74,7 @@ const MENU_ITEMS: MenuItemType[] = [
     },
     {
         key: 'apps-file-manager',
-        label: 'File Manager',
+        label: 'Paperwork',
         isTitle: false,
         icon: 'uil-folder-plus',
         url: '/apps/file',
@@ -92,17 +93,17 @@ const MENU_ITEMS: MenuItemType[] = [
         parentKey: 'pages',
     },
     {
+        key: 'project-gantt',
+        label: 'Driver itinerary',
+        url: '/apps/projects/gantt',
+        badge: { variant: 'light', text: 'New' },
+        parentKey: 'apps-projects',
+    },
+    {
         key: 'page-error-500',
         label: 'Error - 500',
         url: '/error-500',
         parentKey: 'pages',
-    },
-    {
-        key: 'project-gantt',
-        label: 'Gantt',
-        url: '/apps/projects/gantt',
-        badge: { variant: 'light', text: 'New' },
-        parentKey: 'apps-projects',
     },
     {
         key: 'page-error-404',

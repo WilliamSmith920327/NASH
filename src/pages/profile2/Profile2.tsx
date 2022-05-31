@@ -11,10 +11,9 @@ const Profile2 = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Pages', path: '/pages/profile2' },
-                    { label: 'Profile 2', path: '/pages/profile2', active: true },
+                    { label: 'Social Profile', path: '/pages/profile2', active: true },
                 ]}
-                title={'Profile 2'}
+                title={'Social Profile'}
             />
             <Row>
                 <Col xl={4} lg={5}>

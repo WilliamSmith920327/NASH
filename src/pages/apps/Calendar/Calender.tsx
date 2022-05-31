@@ -27,7 +27,6 @@ const Calendar = () => {
         <>
             <PageTitle
                 breadCrumbItems={[
-                    { label: 'Apps', path: '/apps/calendar' },
                     { label: 'Calendar', path: '/apps/calendar', active: true },
                 ]}
                 title={'Calendar'}
