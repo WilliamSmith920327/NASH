@@ -33,7 +33,7 @@ const Delivery = () => {
                         </Col>
                         <Col>
                             <Form.Group className="mb-3">
-                                <Form.Label htmlFor="app">APP #</Form.Label>
+                                <Form.Label htmlFor="app">APPT #</Form.Label>
                                 <Form.Control type="text" name="app" id="app" />
                             </Form.Group>
                         </Col>
@@ -83,14 +83,14 @@ const Delivery = () => {
                     <Row className='mb-3'>
                         <Col></Col>
                         <Col md={2}>
-                            <Button className="next list-inline-item float-end">ADD TRIP</Button>
+                            <Button className="next list-inline-item float-end">ADD TO TRIP</Button>
                         </Col>
                     </Row>
                     <Row>
                         <Col>
                             <Card>
                                 <Card.Header>
-                                    PICK 1
+                                    DELIVERY 1
                                 </Card.Header>
                                 <Card.Body>
                                     <Row>
@@ -110,7 +110,7 @@ const Delivery = () => {
                         <Col>
                             <Card>
                                 <Card.Header>
-                                    PICK 1
+                                    DELIVERY 1
                                 </Card.Header>
                                 <Card.Body>
                                     <Row>

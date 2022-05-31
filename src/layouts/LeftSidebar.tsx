@@ -68,7 +68,7 @@ const LeftSidebar = ({ isCondensed, isLight, hideLogo, hideUserProfile }: LeftSi
                 <>
                     <Link to="/" className="logo text-center logo-light">
                         <span className="logo-lg">
-                            <img src={isLight ? logoDark : logo} alt="logo" height="16" />
+                            <img src={isLight ? logoDark : logo} alt="logo" height="30" />
                         </span>
                         <span className="logo-sm">
                             <img src={isLight ? logoSm : logoDarkSm} alt="logo" height="16" />
@@ -77,7 +77,7 @@ const LeftSidebar = ({ isCondensed, isLight, hideLogo, hideUserProfile }: LeftSi
 
                     <Link to="/" className="logo text-center logo-dark">
                         <span className="logo-lg">
-                            <img src={isLight ? logoDark : logo} alt="logo" height="16" />
+                            <img src={isLight ? logoDark : logo} alt="logo" height="30" />
                         </span>
                         <span className="logo-sm">
                             <img src={isLight ? logoSm : logoDarkSm} alt="logo" height="16" />

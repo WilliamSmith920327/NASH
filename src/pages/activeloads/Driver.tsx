@@ -1,8 +1,12 @@
 import { Button, Card, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Logo from 'assets/images/logo_sm_dark.png';
+import { useModal } from '../uikit/hooks';
+import TripOfferModal from 'pages/trip/TripOfferModal';
 
 const Driver = () => {
+    const { isOpen, size, className, scroll, toggleModal, openModalWithSize, openModalWithClass, openModalWithScroll } =
+        useModal();
     return (
         <Card>
             <Card.Body>
@@ -45,13 +49,14 @@ const Driver = () => {
                             </OverlayTrigger>
                         </p>
                         <div className="button-list mt-3">
-                            <Link to="#" className="btn btn-primary btn-sm mr-1">
+                            <Button className="btn btn-primary btn-sm mr-1">
                                 <i className="mdi mdi-heart me-1"></i> <span>Send Offer</span>
-                            </Link>
-                            <Link to="/trip" className="btn btn-warning btn-sm">
+                            </Button>
+                            <Button className="btn btn-warning btn-sm" onClick={() => openModalWithSize('lg')}>
                                 <i className="mdi mdi-rocket me-1"></i> <span>Add trip</span>
-                            </Link>
+                            </Button>
                         </div>
+                        <TripOfferModal isOpen={isOpen} toggleModal={toggleModal}  className={className} size={size} scroll={scroll}/>
                     </div>
                 </div>
             </Card.Body>

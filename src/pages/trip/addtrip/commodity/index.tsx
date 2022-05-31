@@ -1,6 +1,7 @@
 import { Form, Button, Row, Col, ButtonGroup } from 'react-bootstrap';
 import { PageTitle, FileUploader } from 'components';
 import { Link } from 'react-router-dom';
+import Select from 'react-select';
 
 const Commodit = () => {
     return (
@@ -77,22 +78,45 @@ const Commodit = () => {
                         <Col>
                         <Form.Group className="mb-3">
                                 <Form.Label htmlFor="paymethod">PAYMENT METHOD</Form.Label>
-                                <Form.Control type="text" name="paymethod" id="paymethod" />
+                                <Select
+                                    className="react-select"
+                                    classNamePrefix="react-select"
+                                    options={[
+                                        { value: 'amazon', label: 'Amazon' },
+                                        { value: 'express', label: 'american-express' },
+                                        { value: 'payoneer', label: 'Payoneer' },
+                                        { value: 'paypal', label: 'Paypal' },
+                                        { value: 'stripe', label: 'Stripe' },
+                                    ]}
+                                ></Select>
                             </Form.Group>
 
                             <Form.Group className="mb-3">
-                                <Form.Label htmlFor="treller">TRELLER</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    name="treller"
-                                    id="treller"
-                                />
+                                <Form.Label htmlFor="treller">TRAILER TYPE</Form.Label>
+                                <Select
+                                    className="react-select"
+                                    classNamePrefix="react-select"
+                                    options={[
+                                        { value: 'trailer', label: 'trailer' },
+                                    ]}
+                                ></Select>
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Label htmlFor=""></Form.Label>
-                                <Form.Control type="text" name="" id="" />
+                                <Select
+                                    className="react-select"
+                                    classNamePrefix="react-select"
+                                    options={[
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                        { value: '', label: '' },
+                                    ]}
+                                ></Select>
                             </Form.Group>
-
                             <Form.Group className="mb-3">
                                 <Form.Label htmlFor="examplePassword2">LENGTH</Form.Label>
                                 <Form.Control

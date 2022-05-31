@@ -33,7 +33,7 @@ const Pickup = () => {
                         </Col>
                         <Col>
                             <Form.Group className="mb-3">
-                                <Form.Label htmlFor="app">APP #</Form.Label>
+                                <Form.Label htmlFor="app">APPT #</Form.Label>
                                 <Form.Control type="text" name="app" id="app" />
                             </Form.Group>
                         </Col>
@@ -41,7 +41,7 @@ const Pickup = () => {
                     <Row>
                         <Col md={4}>
                             <Form.Group className="mb-3">
-                                <Form.Label htmlFor="shipper">SHPPER NAME</Form.Label>
+                                <Form.Label htmlFor="shipper">SHIPPER NAME</Form.Label>
                                 <Form.Control type="text" name="shipper" id="shipper" />
                             </Form.Group>
                         </Col>
@@ -83,7 +83,7 @@ const Pickup = () => {
                     <Row className='mb-3'>
                         <Col></Col>
                         <Col md={4}>
-                            <Button className="next list-inline-item float-end">ADD TRIP</Button>
+                            <Button className="next list-inline-item float-end">ADD TO TRIP</Button>
                         </Col>
                     </Row>
                     <Row>

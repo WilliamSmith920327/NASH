@@ -42,6 +42,75 @@ const MENU_ITEMS: MenuItemType[] = [
         icon: 'uil-clipboard-alt',
         url:'/trip',
     },
+    {
+        key: 'email-inbox',
+        label: 'Email',
+        url: '/apps/email/inbox',
+        parentKey: 'apps-email',
+    },
+
+    {
+        key: 'apps-calendar',
+        label: 'Calendar',
+        isTitle: false,
+        icon: 'uil-calender',
+        url: '/apps/calendar',
+    },
+
+    {
+        key: 'apps-chat',
+        label: 'Chat',
+        isTitle: false,
+        icon: 'uil-comments-alt',
+        url: '/apps/chat',
+    },
+    {
+        key: 'apps-social',
+        label: 'Social Feed',
+        isTitle: false,
+        icon: 'uil-rss',
+        url: '/apps/social',
+    },
+    {
+        key: 'apps-file-manager',
+        label: 'File Manager',
+        isTitle: false,
+        icon: 'uil-folder-plus',
+        url: '/apps/file',
+    },
+    { key: 'page-faq', label: 'FAQ', url: '/pages/faq', parentKey: 'pages' },
+    {
+        key: 'page-profile2',
+        label: 'Social Profie',
+        url: '/pages/profile2',
+        parentKey: 'pages',
+    },
+    {
+        key: 'page-profile',
+        label: 'Dispatch Profile',
+        url: '/pages/profile',
+        parentKey: 'pages',
+    },
+    {
+        key: 'page-error-500',
+        label: 'Error - 500',
+        url: '/error-500',
+        parentKey: 'pages',
+    },
+    {
+        key: 'project-gantt',
+        label: 'Gantt',
+        url: '/apps/projects/gantt',
+        badge: { variant: 'light', text: 'New' },
+        parentKey: 'apps-projects',
+    },
+    {
+        key: 'page-error-404',
+        label: 'Error - 404',
+        url: '/error-404',
+        parentKey: 'pages',
+    },
+
 ];
 
 export { MENU_ITEMS };

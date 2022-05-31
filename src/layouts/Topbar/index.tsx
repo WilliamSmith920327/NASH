@@ -10,10 +10,12 @@ import ProfileDropdown from './ProfileDropdown';
 import SearchDropdown from './SearchDropdown';
 import TopbarSearch from './TopbarSearch';
 import AppsDropdown from './AppsDropdown';
+import MapModal from './MapModal';
 import userImage from 'assets/images/users/avatar-1.jpg';
 import logoSmDark from 'assets/images/logo_sm_dark.png';
 import logoSmLight from 'assets/images/logo_sm.png';
 import logo from 'assets/images/logo-light.png';
+import { useModal } from '../../pages/uikit/hooks';
 
 type TopbarProps = {
     hideLogo?: boolean;
@@ -64,9 +66,14 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
     /**
      * Toggles the right sidebar
      */
+    
     const handleRightSideBar = () => {
         dispatch(showRightSidebar());
     };
+
+    const [isStandardOpen, toggleStandard] = useToggle();
+    const { isOpen, size, className, scroll, toggleModal, openModalWithSize, openModalWithClass, openModalWithScroll } =
+    useModal();
 
     return (
         <div className={classNames('navbar-custom', navCssClasses)}>
@@ -83,18 +90,16 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                 )}
 
                 <ul className="list-unstyled topbar-menu float-end mb-0">
-                    {/* <li className="notification-list topbar-dropdown d-xl-none">
-                        <SearchDropdown />
+                    <li className="notification-list">
+                        <button
+                            className="nav-link dropdown-toggle end-bar-toggle arrow-none btn btn-link shadow-none"
+                            onClick={() => openModalWithSize('lg')}
+                        >
+                            <i className="dripicons-clock noti-icon"></i>
+                        </button>
+                        <MapModal isOpen={isOpen} toggleModal={toggleModal}  className={className} size={size} scroll={scroll}/>
+
                     </li>
-                    <li className="dropdown notification-list topbar-dropdown">
-                        <LanguageDropdown />
-                    </li>
-                    <li className="dropdown notification-list">
-                        <NotificationDropdown notifications={notifications} />
-                    </li>
-                    <li className="dropdown notification-list d-none d-sm-inline-block">
-                        <AppsDropdown />
-                    </li> */}
                     <li className="notification-list">
                         <button
                             className="nav-link dropdown-toggle end-bar-toggle arrow-none btn btn-link shadow-none"
