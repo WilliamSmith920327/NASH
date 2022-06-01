@@ -243,8 +243,8 @@
     );
     @include can-toggle-appearance
     (
-      300px, // Toggle width
-      50px,  // Toggle height
+      250px, // Toggle width
+      40px,  // Toggle height
       60px,   // Toggle border radius
       2px,   // Offset (distance btw switch and box)
       13px,  // Label font size

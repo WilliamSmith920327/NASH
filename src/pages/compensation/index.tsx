@@ -12,17 +12,17 @@ const Tables = () => {
                 title={'Compensation'}
             />
             <Card>
-                <div className='bg-light p-4 text-center'>
+                <div className='bg-light p-4'>
                     <p className='text-center fw-bolder text-dark'>COMPENSATION</p>
                     <h1 className='text-center text-dark fw-bolder' style={{fontFamily: 'Franklin Gothic Medium'}}>Take control of your paycheck</h1>
                     <p className='text-center font-weight-bold'>
                         Earn 10 points for every $100 in gross and grow on ranking.<br />
                         Each truck is calculated separatly and automatically.
                     </p>
-                    <div className="can-toggle demo-rebrand-2">
+                    <div className="can-toggle demo-rebrand-2 text-center">
                         <input id="e" type="checkbox"/>
                         <label htmlFor="e">
-                            <div className="can-toggle__switch" data-checked="Open Deck" data-unchecked="Dry & Reefer"></div>
+                            <div className="can-toggle__switch m-auto" data-checked="Open Deck" data-unchecked="Dry & Reefer"></div>
                         </label>
                     </div>
                 </div>

@@ -1,6 +1,9 @@
 import { Row, Col, Card, Nav, Tab } from "react-bootstrap";
 import Driver from "./Driver";
 import Load from "./Loads";
+import Products from './Products';
+import MyTeam from './MyTeam';
+import RecentCompleted from './RecentCompleted';
 
 
 const ActiveLoads = () => {
@@ -16,7 +19,9 @@ const ActiveLoads = () => {
                         <Driver/>
                     </Col>
                     <Col xl={9}>
-                        
+                        <Products/>
+                        <MyTeam/>
+                        <RecentCompleted/>
                     </Col>
                 </Row>
             </Card>
