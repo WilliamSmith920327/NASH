@@ -26,7 +26,7 @@ const Route = () => {
                 <Accordions />
             </Col>
             <Col xl={4} lg={5}>
-                <Tab.Container defaultActiveKey="timeline">
+                <Tab.Container defaultActiveKey="chat">
                     <Card>
                         <Card.Body>
                             <Nav as="ul" variant="pills" className="nav nav-pills bg-nav-pills nav-justified mb-3">

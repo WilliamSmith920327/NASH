@@ -1,4 +1,4 @@
-import { Row, Col, Card, Button } from 'react-bootstrap';
+import { Row, Col, Card, Button, Form } from 'react-bootstrap';
 import { FormInput, FileUploader } from 'components';
 
 const Utah = () => {
@@ -60,13 +60,20 @@ const Utah = () => {
                             placeholder=""
                             containerClass={'mb-3'}
                         />
-                        <FormInput
-                            label="ESCORT"
-                            type="text"
-                            name="escort"
-                            placeholder="ESCORT"
-                            containerClass={'mb-3'}
-                        />
+                        <Form.Group as={Row} style = {{marginTop: '-10px'}}>
+                            <Form.Label htmlFor="exampleEmail3" column sm={12}>
+                                ESCORT
+                            </Form.Label>
+                            <Col sm={12}>
+                                <div className="can-toggle demo-rebrand-2 text-center">
+                                    <input id="e" type="checkbox"/>
+                                    <label htmlFor="e">
+                                        <div className="can-toggle__switch m-auto" data-checked="Open Deck" data-unchecked="Dry & Reefer"></div>
+                                    </label>
+                                </div>
+                            </Col>
+                        </Form.Group>
+                        
                     </Col>
                     <Col sm={4}>
                         <FileUploader

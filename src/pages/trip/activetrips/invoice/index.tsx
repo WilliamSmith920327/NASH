@@ -1,11 +1,37 @@
 import { Row, Col, Card, Tab, Nav, Button, Form} from 'react-bootstrap';
 import { PageTitle, FormInput, FileUploader } from 'components';
+import { useState } from 'react';
 import classNames from 'classnames';
 import Chat from '../../../../components/Chat';
 import Notes from '../../../../components/Notes';
+import { ReactSortable } from 'react-sortablejs';
 import ActiveTripsNavbar from '../../../../components/ActiveTripsNavbar';
 
 const Invoice = () => {
+    type Color = {
+        id: number;
+        color: string;
+    };
+
+    const [items, setItems] = useState<Color[]>([
+        {
+            id: 1,
+            color: 'secondary',
+        },
+    ]);
+    
+    const MovableCard = ({ item }: { item: Color }) => {
+        return (
+            <Card className={classNames('text-white', 'text-center', 'bg-' + item.color)}>
+                <Card.Body>
+                    <blockquote className="">
+                        <p>pdf file</p>
+                    </blockquote>
+                </Card.Body>
+            </Card>
+        );
+    };
+
     return (
         <>
             <PageTitle
@@ -26,11 +52,41 @@ const Invoice = () => {
                             <Row>
                                 <Col sm = {6}>
                                     <h4>RATE $ 5400</h4>
-                                    <Button variant="primary" size="sm"><i className=" dripicons-plus"></i></Button>
+                                    <Row>
+                                        <Col sm = {6}>
+                                            <ReactSortable className="row" list={items} setList={setItems}>
+                                                {(items || []).map((item, index) => {
+                                                    return (
+                                                        <Col key={index.toString()} md={12}>
+                                                            <MovableCard item={item} />
+                                                        </Col>
+                                                    );
+                                                })}
+                                            </ReactSortable>
+                                        </Col>
+                                        <Col sm = {6}>
+                                            <Button variant="primary" size="sm"><i className=" dripicons-plus"></i></Button>
+                                        </Col>
+                                    </Row>
                                 </Col>
                                 <Col sm = {6}>
                                     <h4>POD</h4>
-                                    <Button variant="primary" size="sm"><i className=" dripicons-plus"></i></Button>
+                                    <Row>
+                                        <Col sm = {6}>
+                                            <ReactSortable className="row" list={items} setList={setItems}>
+                                                {(items || []).map((item, index) => {
+                                                    return (
+                                                        <Col key={index.toString()} md={12}>
+                                                            <MovableCard item={item} />
+                                                        </Col>
+                                                    );
+                                                })}
+                                            </ReactSortable>
+                                        </Col>
+                                        <Col sm = {6}>
+                                            <Button variant="primary" size="sm"><i className=" dripicons-plus"></i></Button>
+                                        </Col>
+                                    </Row>
                                 </Col>
                             </Row>
                         </Card.Body>
@@ -111,7 +167,7 @@ const Invoice = () => {
                     </Card>
                 </Col>
                 <Col xl={4} lg={5}>
-                    <Tab.Container defaultActiveKey="timeline">
+                    <Tab.Container defaultActiveKey="chat">
                         <Card>
                             <Card.Body>
                                 <Nav as="ul" variant="pills" className="nav nav-pills bg-nav-pills nav-justified mb-3">
